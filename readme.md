@@ -9,18 +9,18 @@
     <img src="./assets/img/nyebe_white.png" alt="Nyebe" width="130" height="100">
   </a>
 <!-- TODO: Change Title to the name of the title of your Project -->
-  <h3 align="center">Seatwork 3</h3>
+  <h3 align="center">Seatwork 3: Headers and Footers</h3>
 </div>
 <!-- TODO: Make a short description -->
 <div align="center">
-  Headers and Footers
+  This project showcases skills in HTML and CSS, including the creation of multiple pages, various effects, and container manipulations. It also features different versions of headers and footers.
 </div>
 
 <br />
 
 <!-- TODO: Change the zyx-0314 into your github username  -->
 <!-- TODO: Change the WD-Template-Project into the same name of your folder -->
-![](https://visit-counter.vercel.app/counter.png?page=zyx-0314/WD-Template-Project)
+![](https://visit-counter.vercel.app/counter.png?page=MatChewDoor/WD-Seatwork-3)
 
 ---
 
@@ -68,9 +68,10 @@ Guiding Question:
 ### Key Components
 <!-- TODO: List of Key Components -->
 <!-- The following are just sample -->
-- MultiPage Website/Single Page Website
-- Parallax transition
-- Transactional
+- Hover Effect
+- Active Effect
+- Multi Layer Domino Effect
+- Not Effect
 
 ### Technology
 <!-- TODO: List of Technology Used -->

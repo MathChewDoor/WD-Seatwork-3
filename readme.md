@@ -53,18 +53,6 @@
 
 ---
 
-## Overview
-
-<!-- TODO: To be changed -->
-<!-- The following are just sample -->
-Headers and Footers
-
-Guiding Question:
-- What is the project
-- Whats the purpose
-- What are key components
-- What technology used and how it is used
-
 ### Key Components
 <!-- TODO: List of Key Components -->
 <!-- The following are just sample -->

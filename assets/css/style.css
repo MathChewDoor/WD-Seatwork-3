@@ -13,18 +13,10 @@ h1 * {
   font-family: "Merriweather", serif;
 }
 
-/* Dev */
-.starwars,
-.starwars * {
-  /* outline: 1px dashed red; */
-}
+/* Debugging outlines */
+/* .starwars, .starwars * { outline: 1px dashed red; } */
+/* .content, .content * { outline: 3px dotted gold; } */
 
-.content,
-.content * {
-  /* outline: 3px dotted gold; */
-}
-
-/* Dep */
 body {
   background: linear-gradient(75deg, #1b2735 0%, #090a0f 100%);
   background: -moz-linear-gradient(75deg, #1b2735 0%, #090a0f 100%);
@@ -37,7 +29,7 @@ video {
   object-fit: cover;
   width: 100vw;
   height: 100vh;
-  opacity: 70%;
+  opacity: 0.7;
 }
 
 .container {
@@ -47,30 +39,10 @@ video {
   height: 100vh;
   width: 100vw;
   padding: clamp(0.5vw, 3vw, 5vw);
-  background: linear-gradient(
-    -8deg,
-    #ffffff00 0%,
-    #ffffff00 26%,
-    #0f0f0f7a 26%,
-    #0f0f0f7a 100%
-  );
-  background: -moz-linear-gradient(
-    -8deg,
-    #ffffff00 0%,
-    #ffffff00 26%,
-    #0f0f0f7a 26%,
-    #0f0f0f7a 100%
-  );
-  background: -webkit-linear-gradient(
-    -8deg,
-    #ffffff00 0%,
-    #ffffff00 26%,
-    #0f0f0f7a 26%,
-    #0f0f0f7a 100%
-  );
+  background: linear-gradient(-8deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 26%, rgba(15, 15, 15, 0.48) 26%, rgba(15, 15, 15, 0.48) 100%);
 }
 
-.container > .starwars {
+.starwars {
   width: 40%;
   border-right: 2px solid #1b2735;
   height: 100vh;
@@ -78,130 +50,119 @@ video {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-
-  .title {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    height: clamp(2rem, 10vw, 10%);
-  }
-
-  .deathstar {
-    height: clamp(2rem, 5vw, 3rem);
-    transition: all 0.2s ease;
-  }
-
-  .gengar {
-    width: 100%;
-    object-fit: cover;
-    transition: all 0.5s ease;
-  }
-
-  .socials {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    top: clamp(1rem, 1vw, 2rem);
-    right: clamp(1rem, 1vw, 2rem);
-    gap: 0.5rem;
-
-    a {
-      text-decoration: none;
-    }
-
-    i {
-      font-size: 1.5rem;
-      position: relative;
-      display: flex;
-
-      &.bi-github {
-        transform: translateY(-3.5rem);
-        transition: all 0.3s ease;
-        color: transparent;
-      }
-
-      &.bi-envelope {
-        transform: translateY(-5.5rem);
-        transition: all 0.3s ease;
-        color: transparent;
-      }
-    }
-
-    &:hover {
-      .deathstar {
-        transform: rotateZ(720deg);
-      }
-
-      i.bi-github,
-      i.bi-envelope {
-        transform: translateY(0);
-        color: white;
-      }
-    }
-  }
 }
 
-.container > .content {
+.starwars .title {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  height: clamp(2rem, 10vw, 10%);
+}
+
+.starwars .deathstar {
+  height: clamp(2rem, 5vw, 3rem);
+  transition: transform 0.2s ease;
+}
+
+.starwars .gengar {
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.starwars .socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: clamp(1rem, 1vw, 2rem);
+  right: clamp(1rem, 1vw, 2rem);
+  gap: 0.5rem;
+}
+
+.starwars .socials a {
+  text-decoration: none;
+}
+
+.starwars .socials i {
+  font-size: 1.5rem;
+  position: relative;
+  display: flex;
+  transition: transform 0.3s ease, color 0.3s ease;
+  color: transparent;
+}
+
+.starwars .socials i.bi-github {
+  transform: translateY(-3.5rem);
+}
+
+.starwars .socials i.bi-envelope {
+  transform: translateY(-5.5rem);
+}
+
+.starwars .socials:hover .deathstar {
+  transform: rotateZ(720deg);
+}
+
+.starwars .socials:hover i {
+  transform: translateY(0);
+  color: white;
+}
+
+.content {
   width: 70%;
   padding: clamp(0.3rem, 1vw, 2rem) clamp(2rem, 1vw, 7rem);
   display: flex;
   flex-direction: column;
+}
 
-  h3.subtitle {
-    font-size: clamp(1rem, 1.5rem, 2rem);
-    font-weight: 100;
-    letter-spacing: clamp(0.3rem, 1rem, 1.3rem);
-    margin-bottom: 1rem;
-  }
+.content h3.subtitle {
+  font-size: clamp(1rem, 1.5rem, 2rem);
+  font-weight: 100;
+  letter-spacing: clamp(0.3rem, 1rem, 1.3rem);
+  margin-bottom: 1rem;
+}
 
-  h1.title {
-    font-size: clamp(2rem, 3rem, 4rem);
-    margin-bottom: 2rem;
-  }
+.content h1.title {
+  font-size: clamp(2rem, 3rem, 4rem);
+  margin-bottom: 2rem;
+}
 
-  p.description {
-    font-size: clamp(0.6rem, 1rem, 1.2rem);
-    margin-bottom: 3rem;
-  }
+.content p.description {
+  font-size: clamp(0.6rem, 1rem, 1.2rem);
+  margin-bottom: 3rem;
+}
 
-  nav {
-    display: flex;
-    gap: 1rem;
-    width: fit-content;
+.content nav {
+  display: flex;
+  gap: 1rem;
+  width: fit-content;
+}
 
-    &:hover > :not(:hover) {
-      opacity: 0.6;
-    }
+.content nav:hover > :not(:hover) {
+  opacity: 0.6;
+}
 
-    a {
-      border: rgba(255, 255, 255, 0.534) 1px solid;
-      border-radius: 25px;
-      padding: 0.7rem 1.5rem;
-      text-decoration: none;
-      color: white;
-      font-weight: 500;
-      transition: all 0.2s ease;
-      font-size: clamp(0.8rem, 1vw, 1.2rem);
+.content nav a {
+  border: 1px solid rgba(255, 255, 255, 0.534);
+  border-radius: 25px;
+  padding: 0.7rem 1.5rem;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: transform 0.2s ease, filter 0.2s ease;
+  font-size: clamp(0.8rem, 1vw, 1.2rem);
+}
 
-      &:hover {
-        transform: translate(-0.3rem, -0.3rem);
-        filter: drop-shadow(0.3rem 0.3rem white);
-      }
+.content nav a:hover {
+  transform: translate(-0.3rem, -0.3rem);
+  filter: drop-shadow(0.3rem 0.3rem white);
+}
 
-      &.ghost {
-        background: linear-gradient(-8deg, #3e4042 0%, #18191a 100%);
-        background: -moz-linear-gradient(-8deg, #3e4042 0%, #18191a 100%);
-        background: -webkit-linear-gradient(-8deg, #3e4042 0%, #18191a 100%);
-        filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#3e4042", endColorstr="#18191a", GradientType=1 );
-      }
+.content nav a.ghost {
+  background: linear-gradient(-8deg, #3e4042 0%, #18191a 100%);
+}
 
-      &.poison {
-        background: linear-gradient(-8deg, #ff0000 0%, #8b0000 100%);
-        background: -moz-linear-gradient(-8deg, #ff0000 0%, #8b0000 100%);
-        background: -webkit-linear-gradient(-8deg, #ff0000 0%, #8b0000 100%);
-        filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#ff0000", endColorstr="#8b0000", GradientType=1 );
-      }
-    }
-  }
+.content nav a.poison {
+  background: linear-gradient(-8deg, #ff0000 0%, #8b0000 100%);
 }

@@ -53,6 +53,13 @@
 
 ---
 
+## Overview
+
+<!-- TODO: To be changed -->
+<!-- The following are just sample -->
+
+This project demonstrates coding in HTML and CSS, focusing on different types of headers and footers, along with animations. It provides hands-on experience in coding and producing actual outputs.
+
 ### Key Components
 <!-- TODO: List of Key Components -->
 <!-- The following are just sample -->
